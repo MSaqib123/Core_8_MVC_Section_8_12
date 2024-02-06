@@ -7,6 +7,8 @@ namespace Razor_to_DependencyInjection.ViewComponents
         Task<IViewComponentResult> InvokeAsync()
         {
             return View();
+            //this component search or invoke partialView at this location
+            //shared/Components/NameASMatch/Default.cshtml
         }
     }
 }
