@@ -19,12 +19,30 @@ builder.Services.AddControllersWithViews();
 // ));
 
 //___ 2nd Way ____
-builder.Services.AddScoped<ICitiesService,CitiesService>();
+//builder.Services.AddScoped<ICitiesService,CitiesService>();
 
 //___ 3rd Way if we have paraterize service____
 //builder.Services.AddScoped<typeof(ICitiesService<>),typeof(CitiesService<>)>();
 
 #endregion
+
+//=============================
+//---- Types of services -----
+//=============================
+#region Services
+//---------- scoped service -------
+//1 for per request object will be same
+//builder.Services.AddScoped<ICitiesService, CitiesService>();
+
+//---------- Transient service -------
+//new object will be created everytime
+//builder.Services.AddTransient<ICitiesService, CitiesService>();
+
+//---------- Singleton service -------
+//object will be reaming same for end of project
+builder.Services.AddSingleton<ICitiesService, CitiesService>();
+#endregion
+
 
 var app = builder.Build();
 
