@@ -102,10 +102,7 @@ namespace Razor_to_DependencyInjection.Controllers
         //========================== Section = Dependency Inject ==========================
         //=========================================================================
         #region View_Compoentn
-        public HomeController()
-        {
 
-        }
         //======= Class 1 =======
         public IActionResult GetCityList()
         {
