@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Razor_to_DependencyInjection.Models;
+using ServiceDL;
 using System.Diagnostics;
 
 namespace Razor_to_DependencyInjection.Controllers
@@ -102,11 +103,12 @@ namespace Razor_to_DependencyInjection.Controllers
         //========================== Section = Dependency Inject ==========================
         //=========================================================================
         #region View_Compoentn
-
         //======= Class 1 =======
         public IActionResult GetCityList()
         {
-            return View();
+            CitiesService _citiesService = new CitiesService();
+            var list = _citiesService.getAllList();
+            return View(list);
         }
         #endregion
 
