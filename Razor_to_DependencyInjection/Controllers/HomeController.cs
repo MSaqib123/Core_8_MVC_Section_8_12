@@ -6,13 +6,6 @@ namespace Razor_to_DependencyInjection.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
@@ -23,10 +16,44 @@ namespace Razor_to_DependencyInjection.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        //=========================================================================
+        //========================== Section = RazarPage ==========================
+        //=========================================================================
+        #region RazaarPage
+        //========= class 1,2 =====
+        //MVC Archetecure   Model , View , Controller
+        //=========
+
+        //========= class 3 CodeBlock in View =====
+        //=========
+
+        //========= class 4 ,5,6,7 ,8 =====
+        //Switcht stetmtn
+        //Foreach
+        //forloop,
+        //littral
+        //loacl Fn
+
+        //========= class 9, html.Raw() ========
+        //html.Raw("<div><i>Pakistan</i></div>")
+        //=========
+
+        //========= class 10,11,12 ========
+        //Send data from View To controller
+        //=========
+
+        //========= class 13,14, =========
+        //strongly type model
+        //=========
+
+        //========= class 15 =========
+        //VM
+        //=========
+
+        //========= class 16 =========
+        //View IMport
+        //=========
+        #endregion
+
     }
 }
