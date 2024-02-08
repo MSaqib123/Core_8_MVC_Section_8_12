@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Razor_to_DependencyInjection.Models;
 using ServiceDL;
+using ServiceInterfaces;
 using System.Diagnostics;
 
 namespace Razor_to_DependencyInjection.Controllers
@@ -104,10 +105,16 @@ namespace Razor_to_DependencyInjection.Controllers
         //=========================================================================
         #region View_Compoentn
         //======= Class 1 =======
+        private readonly ICitiesService _cities;
+        public HomeController(ICitiesService cities)
+        {
+            _cities = cities;
+        }
         public IActionResult GetCityList()
         {
-            CitiesService _citiesService = new CitiesService();
-            var list = _citiesService.getAllList();
+            //CitiesService _citiesService = new CitiesService();
+            //var list = _citiesService.getAllList();
+            var list = _cities.getAllList();
             return View(list);
         }
         #endregion

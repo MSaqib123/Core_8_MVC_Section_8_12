@@ -1,6 +1,8 @@
-﻿namespace ServiceDL
+﻿using ServiceInterfaces;
+
+namespace ServiceDL
 {
-    public class CitiesService
+    public class CitiesService : ICitiesService
     {
         public List<string> cities { get; set; }
         public CitiesService()

@@ -1,7 +1,19 @@
+using ServiceDL;
+using ServiceInterfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//=============================
+//---- Register services -----
+//=============================
+builder.Services.Add(new ServiceDescriptor(
+    typeof(ICitiesService),
+    typeof(CitiesService),
+    ServiceLifetime.Scoped
+ ));
 
 var app = builder.Build();
 
