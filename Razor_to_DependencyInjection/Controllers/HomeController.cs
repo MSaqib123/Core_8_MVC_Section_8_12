@@ -62,5 +62,12 @@ namespace Razor_to_DependencyInjection.Controllers
         //Time bacaaoo or agaaa nekal jaoo
         #endregion
 
+        //=========================================================================
+        //========================== Section = PartialView ==========================
+        //=========================================================================
+        #region PartialView
+        //Time bacaaoo or agaaa nekal jaoo
+        #endregion
+
     }
 }
