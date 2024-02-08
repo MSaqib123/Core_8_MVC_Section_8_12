@@ -74,7 +74,9 @@ namespace Razor_to_DependencyInjection.Controllers
         //=========================================================================
         #region View_Compoentn
         //======= Class 1 =======
-        //Create View_Comonent
+        //Create View_Comonent (async)
+        //Add partialView of compnete Default.cshtml
+        //Change name of  partialView --> then Add name from component return
         //=======================
         #endregion
     }
