@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.HttpLogging;
 using ServiceDL;
 using ServiceInterfaces;
 
@@ -9,11 +10,21 @@ builder.Services.AddControllersWithViews();
 //=============================
 //---- Register services -----
 //=============================
-builder.Services.Add(new ServiceDescriptor(
-    typeof(ICitiesService),
-    typeof(CitiesService),
-    ServiceLifetime.Scoped
- ));
+#region Services
+//___ 1st Way ____
+//builder.Services.Add(new ServiceDescriptor(
+//    typeof(ICitiesService),
+//    typeof(CitiesService),
+//    ServiceLifetime.Scoped
+// ));
+
+//___ 2nd Way ____
+builder.Services.AddScoped<ICitiesService,CitiesService>();
+
+//___ 3rd Way if we have paraterize service____
+//builder.Services.AddScoped<typeof(ICitiesService<>),typeof(CitiesService<>)>();
+
+#endregion
 
 var app = builder.Build();
 
