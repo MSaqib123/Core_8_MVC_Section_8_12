@@ -69,5 +69,13 @@ namespace Razor_to_DependencyInjection.Controllers
         //Time bacaaoo or agaaa nekal jaoo
         #endregion
 
+        //=========================================================================
+        //========================== Section = ViewComponent ==========================
+        //=========================================================================
+        #region View_Compoentn
+        //======= Class 1 =======
+        //Create View_Comonent
+        //=======================
+        #endregion
     }
 }
