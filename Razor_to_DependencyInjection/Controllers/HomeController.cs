@@ -55,5 +55,12 @@ namespace Razor_to_DependencyInjection.Controllers
         //=========
         #endregion
 
+        //=========================================================================
+        //========================== Section = Layout ==========================
+        //=========================================================================
+        #region Layout
+        //Time bacaaoo or agaaa nekal jaoo
+        #endregion
+
     }
 }
