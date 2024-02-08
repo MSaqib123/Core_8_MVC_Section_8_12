@@ -12,3 +12,23 @@
 
 <h1>___ Grid ViewComponent here ___</h1>
 @await Component.InvokeAsync("Grid")
+
+<br />
+<h1>Click see ViewComponentResult()</h1>
+<button id="load-Grid-button" class="btn btn-danger">Load ViewComponent on Click</button>
+<div id="ListViewcompoent">
+
+</div>
+
+
+<script>
+
+    document.querySelector("#load-Grid-button").addEventListener("click",
+        async function () {
+            alert("s");
+            var response = await fetch("ViewComponentByActinResul", { method: "GET" });
+            var resBody = await response.text();
+            document.querySelector("#ListViewcompoent").innerHTML = resBody;
+        }
+    )
+</script>

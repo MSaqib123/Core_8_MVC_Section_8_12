@@ -78,6 +78,27 @@ namespace Razor_to_DependencyInjection.Controllers
         //Add partialView of compnete Default.cshtml
         //Change name of  partialView --> then Add name from component return
         //=======================
+
+        //======= class 5 =====
+        //showing Viewcompanent using Jquery
+        public IActionResult ViewComponentByActinResul()
+        {
+            Person p = new Person();
+            List<Person> pList = new List<Person>()
+            {
+                new Person(){Id = 1,Name = "Saqib" , Address = "abc"},
+                new Person(){Id = 2,Name = "A" , Address = "abc"},
+                new Person(){Id = 3,Name = "B" , Address = "abc"},
+                new Person(){Id = 4,Name = "C" , Address = "abc"},
+                new Person(){Id = 5,Name = "D" , Address = "abc"},
+            };
+
+            return ViewComponent("Person",pList);
+        }
         #endregion
+
+
+
+       
     }
 }
